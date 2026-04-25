@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+
+  dynamo:
+    image: amazon/dynamodb-local
+    container_name: signup_dynamo
+    ports:
+      - "8000:8000"
+    command: ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-inMemory"]
+
+  dynamo-admin:
+    image: aaronshaf/dynamodb-admin
+    container_name: signup_dynamo_admin
+    ports:
+      - "8001:8001"
+    environment:
+      DYNAMO_ENDPOINT: http://dynamo:8000
+      AWS_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: local
+      AWS_SECRET_ACCESS_KEY: local
+    depends_on:
+      - dynamo
+
+  api:
+    build: ./api
+    container_name: signup_api
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      AWS_REGION: us-east-1
+      DYNAMO_ENDPOINT: http://dynamo:8000
+      TABLE_NAME: Signups
+    depends_on:
+      - dynamo
+    restart: on-failure
+
+  ui:
+    build: ./ui
+    container_name: signup_ui
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:3001
+    depends_on:
+      - api
