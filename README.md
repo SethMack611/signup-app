@@ -36,7 +36,7 @@ A full-stack web application demonstrating controlled React forms, real-time val
 ### Run the App
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/signup-app.git
+git clone https://github.com/SethMack611/signup-app
 cd signup-app
 docker compose up --build
 ```
