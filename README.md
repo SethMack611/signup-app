@@ -27,26 +27,6 @@ A full-stack web application demonstrating controlled React forms, real-time val
 
 ---
 
-## 🏗️ Architecture
-┌─────────────────────────────────────────────┐
-│              Docker Compose                  │
-│                                             │
-│  ┌──────────┐     ┌──────────────────────┐  │
-│  │  Vite UI │────▶│   Express API        │  │
-│  │ :5173    │     │   :3001              │  │
-│  └──────────┘     └──────────┬───────────┘  │
-│                              │              │
-│                   ┌──────────▼───────────┐  │
-│                   │  DynamoDB Local      │  │
-│                   │  :8000               │  │
-│                   └──────────────────────┘  │
-│                                             │
-│  ┌──────────────────────────────────────┐   │
-│  │  DynamoDB Admin GUI  :8001           │   │
-│  └──────────────────────────────────────┘   │
-└─────────────────────────────────────────────┘
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -91,30 +71,6 @@ Expected output: **15 tests passing**
 
 ---
 
-## 📁 Project Structure
-signup-app/
-├── docker-compose.yml
-├── README.md
-├── api/
-│   ├── app.js
-│   ├── index.js
-│   ├── dynamo.js
-│   ├── Dockerfile
-│   ├── routes/
-│   │   └── signups.js
-│   ├── scripts/
-│   │   └── createTable.js
-│   └── tests/
-│       └── signups.test.js
-└── ui/
-├── Dockerfile
-└── src/
-├── App.jsx
-└── components/
-└── SignupForm.jsx
-
----
-
 ## 🎬 Demo
 
 ▶️ [Watch the demo video](https://YOUR_LOOM_LINK_HERE)
@@ -124,4 +80,4 @@ signup-app/
 ## 👤 Author
 
 **Seth Mack**  
-[LinkedIn]((https://www.linkedin.com/in/seth-mack-9467a1299/)) · [GitHub]((https://github.com/SethMack611))
+[LinkedIn](https://www.linkedin.com/in/seth-mack-9467a1299/) · [GitHub](https://github.com/SethMack611)
