@@ -123,5 +123,5 @@ signup-app/
 
 ## 👤 Author
 
-**Your Name**  
-[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) · [GitHub](https://github.com/YOUR_USERNAME)
+**Seth Mack**  
+[LinkedIn]((https://www.linkedin.com/in/seth-mack-9467a1299/)) · [GitHub]((https://github.com/SethMack611))
