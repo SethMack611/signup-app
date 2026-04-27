@@ -73,7 +73,7 @@ Expected output: **15 tests passing**
 
 ## 🎬 Demo
 
-▶️ [Watch the demo video](https://YOUR_LOOM_LINK_HERE)
+▶️ [Watch the demo video][https://youtu.be/_VRzr5zxCbA]
 
 ---
 
